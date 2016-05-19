@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/{public/images/wpattern_wproject.ico" />
+	<script name="jquery/jquery.js" library="primefaces"></script>
+	<title>App Easy Pizza</title>
+</h:head>
+
+<h:body>
+<pm:page id="first">
+            <pm:header title="#{login.getNome()}" id="Title" style="font-size: 18px; font-family: Monotype-Corsiva; background-color:#D95B43; border: 2px solid black;"></pm:header>
+ 			<pm:content>
+ 			<div align="center">
+ 			
+ 			<p:graphicImage
+			value="public/images/pizaa.png"
+			width="290" height="135"/> 
+			
+ 			<h:form>            
+
+            <h:outputLabel for="username" value="Usuario:" />
+            <p:inputText id="username" value="#{login.username}" required="true" label="username" placeholder = "O mais safado do Brasil!"/>
+ 
+            <h:outputLabel for="password" value="Senha:" />
+            <p:password id="password" value="#{login.password}" required="true" label="password" placeholder = "**********" style="margin-bottom: 40px"/>
+ 
+            
+                <p:commandButton value="Login" action="#{login.login}" 
+                                 style=" font-size: 22px; width: 280px; height: 70px; margin-bottom: 20px; border: 3px solid black; background: #C7F464"/>              
+
+         
+</h:form>
+    		<p:link outcome="/senha" value="Esqueci minha senha!" style="font-size: 14px; margin-bottom: 40px;"/>  
+
+			</div>
+            </pm:content>
+            <pm:footer title="******* Desenvolvedor: Leandro L. Ramos *******" style="border: 2px solid black;font-size: 14px; font-family: Monotype-Corsiva; background-color:#D95B43;"></pm:footer>
+        </pm:page> 
+        
+    </h:body>
+</html>

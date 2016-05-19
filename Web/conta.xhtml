@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/public/images/wpattern_wproject.ico" />	
+	
+</h:head>
+
+<h:body>
+<pm:page>
+            <pm:header title="Conta:" id="title" style="font-size: 26px; border: 2px solid black; font-family: Monotype-Corsiva; background-color:#83AF9B;"></pm:header>
+             <div align="center">
+ 			<pm:content>
+ 					
+			<h2 class="first">  </h2>
+			<p:panel header="Valor Total: R$ #{montarPizza.getTotal()}" style="border: 3px solid black; font-size: 30px; font-family: Monotype-Corsiva">
+    		<h:outputText value="Para realizar o pagamento se Direcione ao caixa mais proximo. Tenha uma Boa Noite." 
+    		style="font-size: 22px; font-family: Monotype-Corsiva;"/>
+			</p:panel>	
+			
+    		<p:button value="Fechar" outcome="login.bsi" 
+    		style="font-size: 22px; width: 300px; height: 60px; margin-bottom: 20px; border: 3px solid black; background: #fb4249"/>          
+            
+           <p:graphicImage
+			value="public/images/pizaa.png"
+			width="290" height="135"/> 
+			<p />
+			
+            </pm:content>
+            <pm:footer title=" " style="font-size: 18px; font-family: Monotype-Corsiva; background-color:#83AF9B; border: 2px solid black;"></pm:footer>
+             </div>
+        </pm:page>
+    </h:body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/public/images/wpattern_wproject.ico" />	
+</h:head>
+
+<h:body>
+<pm:page id="menuPizza" style="background-color:#E5FCC2">
+            <pm:header title="Menu Easy Pizza" id="title" style="font-size: 18px; border: 2px solid black; font-family: Monotype-Corsiva; background-color:#ECD078;"></pm:header>
+             <div align="center">
+ 			<pm:content>
+ 			
+ 			
+ 			<p:graphicImage
+			value="public/images/pizza_PNG7151.png"
+			width="190" height="190" position="center" /> 
+
+    		<p:button value="Montar Pizza" outcome="tamanho.bsi"  
+    		style=" font-size: 22px; width: 300px; height: 60px; margin-bottom: 20px; border: 3px solid black; background: #C7F464"/>
+
+
+    		<p:button value="Fechar Conta" outcome="conta.bsi" 
+    		style=" font-size: 22px; width: 300px; height: 60px; margin-bottom: 20px; border: 3px solid black; background: #D95B43"/>
+            
+           
+            </pm:content>
+            <pm:footer title=" " style="font-size: 18px; font-family: Monotype-Corsiva; background-color:#ECD078; border: 2px solid black;"></pm:footer>
+             </div>
+        </pm:page>
+    </h:body>
+</html>
